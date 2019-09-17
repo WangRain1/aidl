@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        Intent intent = new Intent(this,MyService.class);
+//        Intent intent = new Intent(this,MyService.class);
+        Intent intent = new Intent();
+        intent.setClassName("com.parrot.car.aidl","com.parrot.car.aidl.MyService");
         bindService(intent,mConnection,BIND_AUTO_CREATE);
     }
 }
